@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">idp._renderscript</string>
+    <string name="title_activity_histogram_equalization">HistogramEqualizationActivity</string>
 </resources>

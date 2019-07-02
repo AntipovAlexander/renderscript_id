@@ -1,6 +1,6 @@
 #pragma version(1)
 #pragma rs_fp_relaxed
-#pragma rs java_package_name(com.example.q.renderscriptexample)
+#pragma rs java_package_name(com.antipov.coroutines.idp_renderscript)
 
 #include "rs_debug.rsh"
 
