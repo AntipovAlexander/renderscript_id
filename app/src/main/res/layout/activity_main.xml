@@ -19,6 +19,13 @@
                 android:text="Intrinsic Blur"/>
 
         <Button
+                android:id="@+id/bw"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Black And White"/>
+
+        <Button
                 android:id="@+id/histogramEqv"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
