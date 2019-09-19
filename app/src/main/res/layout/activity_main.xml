@@ -31,6 +31,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Histogram Equalization"/>
+        <Button
+                android:id="@+id/scriptIntrinsicConvolve"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ScriptIntrinsicConvolve3x3"/>
 
     </LinearLayout>
 

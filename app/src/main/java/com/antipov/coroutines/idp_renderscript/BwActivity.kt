@@ -25,7 +25,7 @@ class BwActivity : AppCompatActivity() {
     private fun initRs(): Bitmap {
         // get bmp
         bmp = BitmapFactory.decodeResource(resources, R.drawable.yosemite)
-        val res = bmp.copy(bmp.getConfig(), true)
+        val res = bmp.copy(bmp.config, true)
         // Creating render script
         rs = RenderScript.create(this)
         //Create script. An Element represents one item within an Allocation.

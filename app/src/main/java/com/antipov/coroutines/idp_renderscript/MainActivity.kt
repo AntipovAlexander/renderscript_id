@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         intrinsicBlur.setOnClickListener { startActivity(Intent(this, IntrinsicBlurActivity::class.java)) }
         bw.setOnClickListener { startActivity(Intent(this, BwActivity::class.java)) }
         histogramEqv.setOnClickListener { startActivity(Intent(this, HistogramEqualizationActivity::class.java)) }
+        scriptIntrinsicConvolve.setOnClickListener { startActivity(Intent(this, ConvolutionActivity::class.java)) }
     }
 
 }

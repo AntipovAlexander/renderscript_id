@@ -2,19 +2,25 @@ package com.antipov.coroutines.idp_renderscript
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v8.renderscript.Allocation
 import android.support.v8.renderscript.RenderScript
+import kotlinx.android.synthetic.main.activity_histogram_equalization.*
 
 class HistogramEqualizationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_histogram_equalization)
+
+        val bmp = BitmapFactory.decodeResource(resources, R.drawable.unequalized)
+        val equalized = histogramEqualization(bmp, this)
+        img.setImageBitmap(equalized)
     }
 
-    fun histogramEqualization(image: Bitmap, context: Context): Bitmap {
+    private fun histogramEqualization(image: Bitmap, context: Context): Bitmap {
         //Get image size
         val width = image.width
         val height = image.height
