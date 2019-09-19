@@ -4,7 +4,7 @@
 
 #include "rs_debug.rsh"
 
-uchar4 __attribute__((kernel)) root(uchar4 in, uint32_t x, uint32_t y) {
+uchar4 __attribute__((kernel)) root(uchar4 in) {
     //Convert input uchar4 to float4
     float4 f4 = rsUnpackColor8888(in);
 

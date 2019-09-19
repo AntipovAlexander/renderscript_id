@@ -37,6 +37,12 @@ class BwActivity : AppCompatActivity() {
         bwAllocation = Allocation.createTyped(rs, allocation.type)
         bwScript.forEach_root(allocation, bwAllocation)
         bwAllocation.copyTo(res)
+
+        allocation.destroy()
+        bwAllocation.destroy()
+        bwScript.destroy()
+        rs.destroy()
+
         return res
     }
 }
