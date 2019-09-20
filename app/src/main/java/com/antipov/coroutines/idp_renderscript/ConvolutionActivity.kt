@@ -17,9 +17,14 @@ class ConvolutionActivity : AppCompatActivity() {
     private lateinit var bmp: Bitmap
 
     val blurMatrix =
-        floatArrayOf(0.0625f, 0.125f, 0.0625f, 0.125f, 0.25f, 0.125f, 0.0625f, 0.125f, 0.0625f)
+        floatArrayOf(0.11111111f, 0.11111111f, 0.11111111f, 0.11111111f, 0.11111111f, 0.11111111f, 0.11111111f, 0.11111111f, 0.11111111f)
     val identity = floatArrayOf(0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f)
     val edge = floatArrayOf(-1f, -1f, -1f, -1f, 8f, -1f, -1f, -1f, -1f)
+
+    val horizontalLines = floatArrayOf(-1f, -1f, -1f, 2f, 2f, 2f, -1f, -1f, -1f)
+
+    val verticalLines = floatArrayOf(-1f, 2f, -1f, -1f, 2f, -1f, -1f, 2f, -1f)
+
     var matrix_sharpen = floatArrayOf(0f, -1f, 0f, -1f, 5f, -1f, 0f, -1f, 0f)
     private val TRANSFORMATION_MATRIX = Matrix4f(
         floatArrayOf(
@@ -50,7 +55,7 @@ class ConvolutionActivity : AppCompatActivity() {
 
     private fun initRs(): Bitmap {
         // get bmp
-        bmp = BitmapFactory.decodeResource(resources, R.drawable.unsharp)
+        bmp = BitmapFactory.decodeResource(resources, R.drawable.houses)
         val res = Bitmap.createBitmap(bmp.width, bmp.height, bmp.config)
         // Creating render script
         rs = RenderScript.create(this)
